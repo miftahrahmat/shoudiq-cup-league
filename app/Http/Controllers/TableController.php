@@ -14,4 +14,9 @@ class TableController extends Controller
         return view('front.table', compact('teams'));
     }
 
+    public function up()
+    {
+    	return view('errors.503');
+    }
+
 }

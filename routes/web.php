@@ -4,6 +4,8 @@ Route::get('/games', 'GamesController@index');
 Route::get('/teams', 'TeamsController@index');
 Route::get('/players/{team_id}', 'TeamsController@players');
 Route::get('/table', 'TableController@index');
+Route::get('/topscores', 'TableController@up');
+Route::get('/players', 'TeamsController@splayer')->name('players.show');
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('auth.login');

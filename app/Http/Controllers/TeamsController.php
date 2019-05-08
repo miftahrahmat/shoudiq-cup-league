@@ -22,4 +22,11 @@ class TeamsController extends Controller
         return view('front.players', compact('players', 'team'));
     }
 
+    public function splayer($id)
+    {
+        $players = Player::findOrFail($id);
+
+        return view('front.splayers', compact('players'));
+    }
+
 }

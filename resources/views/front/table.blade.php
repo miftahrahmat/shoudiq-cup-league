@@ -4,15 +4,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Standings Table</h1>
+                <h1>Klasemen Sementara</h1>
 
                 <table class="table">
                     <tr>
                         <th>No</th>
                         <th>Team</th>
-                        <th>Won</th>
-                        <th>Tied</th>
-                        <th>Lost</th>
+                        <th>Menang</th>
+                        <th>Imbang</th>
+                        <th>Kalah</th>
+                        <th>Main</th>
                         <th>Points</th>
                     </tr>
                     @forelse($teams as $team)
@@ -22,6 +23,7 @@
                             <td>{{ $team->won }}</td>
                             <td>{{ $team->tied }}</td>
                             <td>{{ $team->lost }}</td>
+                            <td>{{ $team->games }}</td>
                             <td>{{ $team->points }}</td>
                         </tr>
                     @empty

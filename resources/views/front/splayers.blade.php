@@ -4,22 +4,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>{{ $team->name }} Squad</h1>
+                <h1>Profile{{--  {{ $player->name }} --}}</h1>
 
                 <table class="table">
                     <tr>
+                        <th>#</th>
                         <th>Nama</th>
                         <th>Tanggal Lahir</th>
                     </tr>
-
+                  
                     @forelse($players as $player)
                         <tr>
-                            <td><a href="{{ route('players.show',[$player->id]) }}">{{ $player->name . ' ' . $player->surname }}</a></td>
-                            <td>{{ $player->birth_date }}</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $player->name }}</td>
+                            <td>{{ $player->birth_day }}</td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="2">No players.</td>
+                            <td colspan="6">No teams.</td>
                         </tr>
                     @endforelse
                 </table>

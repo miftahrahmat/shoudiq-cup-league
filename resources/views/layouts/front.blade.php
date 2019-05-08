@@ -44,13 +44,13 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/games">Games</a>
-                    </li>
-                    <li>
                         <a href="/teams">Teams</a>
                     </li>
                     <li>
-                        <a href="/table">Table</a>
+                        <a href="/table">Klasemen Sementara</a>
+                    </li>
+                    <li>
+                        <a href="/topscores">Top Scores</a>
                     </li>
                 </ul>
 
